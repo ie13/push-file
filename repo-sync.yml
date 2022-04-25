@@ -1,28 +1,22 @@
 # File: .github/workflows/repo-sync.yml
-name: Repo Sync
+name: repo-sync
 
 on:
   schedule: 
-  #- cron: "*/15 * * * *" # every 15 minutes. set to whatever interval you like
   - cron: "0 3 */7 * *"
   workflow_dispatch:
 
 jobs:
   repo-sync:
-    name: Repo Sync
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: repo-sync/github-sync@v2
-      name: Sync repo to master
+      with:
+        persist-credentials: false
+    - name: repo-sync
+      uses: repo-sync/github-sync@v2
       with:
         source_repo: ${{ secrets.SOURCE_REPO }} # source repo e.g. "https://github.com/ie13/ios_rule_script.git"
         source_branch: ${{ secrets.SOURCE_BRANCH }} # e.g. master
-        destination_branch: ${{ secrets.INTERMEDIATE_BRANCH }} # e.g. repo-sync
-        github_token: ${{ secrets.PAT }}
-    - uses: repo-sync/pull-request@v2
-      name: Create pull request
-      with:
-        source_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
         destination_branch: ${{ secrets.SOURCE_BRANCH }} # e.g. master
         github_token: ${{ secrets.PAT }}
