@@ -181,3 +181,16 @@ jobs:
         user_email: 'vijaylou@gmail.com'
         user_name: 'ie13'
         commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file14
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/dmnemec_push'
+        destination_branch: 'main'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
