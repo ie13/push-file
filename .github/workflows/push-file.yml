@@ -1,0 +1,183 @@
+# File: .github/workflows/push-file.yml
+name: push-file
+
+on:
+  schedule: 
+  - cron: "0 2 */7 * *"
+  workflow_dispatch:
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes test file01
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/rules_blackmatrix7'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file02
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/1024_0honus0'
+        destination_branch: 'Multi_User'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file03
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/rules_DevineEngine'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file04
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/rules_GeQ1an'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file05
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/rules_zwf234'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file06
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/jimmyorz_surge'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file07
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/rules_Koolson'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file08
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/rules_Tartarus2014'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file09
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/rules_Loon_Tartarus2014'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file10
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/v2ray_readme_v2fly'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file11
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/v2ray_core_v2fly'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file12
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/xray_core_XTLS'
+        destination_branch: 'main'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
+        
+    - name: Pushes test file13
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'repo-sync.yml'
+        destination_repo: 'ie13/clash_Dreamacro'
+        destination_branch: 'master'
+        destination_folder: '.github/workflows'
+        user_email: 'vijaylou@gmail.com'
+        user_name: 'ie13'
+        commit_message: 'A custom message for the commit'
