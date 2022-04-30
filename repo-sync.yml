@@ -3,7 +3,7 @@ name: repo-sync
 
 on:
   schedule: 
-  - cron: "0 3 31 * *"
+  - cron: "0 3 28 * *"
   workflow_dispatch:
 
 jobs:
