@@ -3,7 +3,7 @@ name: push-file
 
 on:
   schedule: 
-  - cron: "0 2 26 * *"
+  - cron: "0 2 25 * *"
   workflow_dispatch:
 
 jobs:
