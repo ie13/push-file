@@ -1,5 +1,5 @@
 # File: .github/workflows/push-file.yml
-name: push-fil
+name: push-file
 
 on:
   schedule: 
